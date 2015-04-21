@@ -1,0 +1,20 @@
+body
+{
+	background: #1a1a1a;
+	margin: 20px;
+	margin-top: 100px;
+}
+
+#logo
+{
+	text-align: center;
+}
+
+#body
+{
+	text-align: center;
+	font: 150%/125% "Segoe UI", sans-serif;
+	letter-spacing: 1px;
+	color: #dbdbdb;
+	margin-top: 50px;
+}
