@@ -18,3 +18,14 @@ body
 	color: #dbdbdb;
 	margin-top: 50px;
 }
+
+#body a
+{
+	font-size: inherit;
+	color: inherit;
+}
+
+#body a:hover
+{
+	text-decoration: underline;
+}
