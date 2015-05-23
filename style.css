@@ -25,6 +25,11 @@ body
 	color: inherit;
 }
 
+#body a:link
+{
+	text-decoration: none;
+}
+
 #body a:hover
 {
 	text-decoration: underline;
