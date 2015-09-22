@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html,
 body {
   background: #ffffff;
@@ -102,4 +103,41 @@ a:visited {
 a:hover,
 a:active {
   text-decoration: underline;
+=======
+body
+{
+	background: #1a1a1a;
+	margin: 20px;
+	margin-top: 100px;
+}
+
+#logo
+{
+	text-align: center;
+}
+
+#body
+{
+	text-align: center;
+	font: 150%/125% "Segoe UI", sans-serif;
+	letter-spacing: 1px;
+	color: #dbdbdb;
+	margin-top: 50px;
+}
+
+#body a
+{
+	font-size: inherit;
+	color: inherit;
+}
+
+#body a:link
+{
+	text-decoration: none;
+}
+
+#body a:hover
+{
+	text-decoration: underline;
+>>>>>>> origin/master
 }
