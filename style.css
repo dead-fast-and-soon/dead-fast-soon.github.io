@@ -1,31 +1,105 @@
-body
-{
-	background: #1a1a1a;
-	margin: 20px;
-	margin-top: 100px;
+html,
+body {
+  background: #ffffff;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  min-height: 100%;
+  font-family: "Open Sans", freesans, sans-serif;
+  font-size: 14px;
+  color: #242628;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
-
-#logo
-{
-	text-align: center;
+.top-bar {
+  width: 100%;
+  height: 40px;
+  padding: 10px 0px;
+  color: #ffffff;
+  background: #242628;
 }
-
-#body
-{
-	text-align: center;
-	font: 150%/125% "Segoe UI", sans-serif;
-	letter-spacing: 1px;
-	color: #dbdbdb;
-	margin-top: 50px;
+.top-bar > #logo {
+  padding-left: 5px;
+  padding-top: 5px;
 }
-
-#body a
-{
-	font-size: inherit;
-	color: inherit;
+.top-bar > #logo > img {
+  max-height: 50px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
-
-#body a:hover
-{
-	text-decoration: underline;
+#footer {
+  clear: both;
+  position: relative;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  padding-down: 10px;
+}
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 780px;
+  margin: auto 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: hidden;
+}
+.content {
+  margin-top: 40px;
+  height: 100%;
+}
+#name {
+  display: inline-block;
+  margin-top: 5px;
+  height: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 10px;
+}
+#credits {
+  display: inline-block;
+  font-size: 14px;
+  color: #bcbfc2;
+}
+#top-bar-right {
+  float: right;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+#top-bar-right ul {
+  list-style-type: none;
+  display: inline-block;
+  margin-top: 7px;
+  height: 100%;
+}
+#top-bar-right ul > li {
+  margin-left: 10px;
+  display: inline-block;
+}
+#top-bar-right a {
+  transition: color 0.5s ease;
+}
+#top-bar-right a:link,
+#top-bar-right a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+#top-bar-right a:hover,
+#top-bar-right a:active {
+  color: #44b39b;
+  text-decoration: none;
+}
+a {
+  color: #44b39b;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
 }
