@@ -97,24 +97,30 @@ body {
   user-select: none;
 }
 .jumbotron {
+  height: 500px;
+}
+.jumbotron__bg {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  background-image: url('bg.png');
+}
+.jumbotron__caption {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  height: 500px;
-  background-image: url('bg.png');
-  background-position: center;
 }
-.jumbotron p {
+.jumbotron__caption p {
   margin: 0px;
   text-align: center;
   color: white;
   font-size: 2em;
   padding-top: 180px;
 }
-.jumbotron p:hover {
+.jumbotron__caption p:hover {
   cursor: default;
 }
 .content {

@@ -7,6 +7,13 @@
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+  window.onload = function() {
+  	var s = skrollr.init();
+  }
+  </script>
 </head>
 <body>
 <div class="bar-top">
@@ -30,8 +37,12 @@ hyperfresh
 </div>
 <div class="wrapper content">
 <div class="jumbotron">
+<div class="jumbotron__bg" data-start="background-position: 50% 0px;" data-500-start="background-position: 50% -300px;">
+<div class="jumbotron__caption">
 <p>we are just a group of friends who code stuff<br />
 i’m uninstalling cs:go what a load of crap</p>
+</div>
+</div>
 </div>
 </div>
 <div class="bar-bottom">

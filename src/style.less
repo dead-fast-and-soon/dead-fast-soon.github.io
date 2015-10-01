@@ -115,23 +115,30 @@ html, body {
 }
 
 .jumbotron {
-	.noselect;
-
 	height: 500px;
-	background-image: url('bg.png');
-	background-position: center;
 
-	p {
-		margin: 0px;
-		text-align: center;
-		color: white;
-		font-size: 2em;
-		padding-top: 180px;
+	&__bg {
+		position: absolute;
+		height: 500px;
+		width: 100%;
+		background-image: url('bg.png');
 	}
 
-	p:hover {
-		cursor: default;
+	&__caption {
+		.noselect;
+		p {
+			margin: 0px;
+			text-align: center;
+			color: white;
+			font-size: 2em;
+			padding-top: 180px;
+		}
+
+		p:hover {
+			cursor: default;
+		}
 	}
+
 }
 .content {
 	height: 100%;

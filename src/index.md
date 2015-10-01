@@ -17,8 +17,16 @@
 
 <div class="wrapper content">
 <div class="jumbotron">
+<div
+	class="jumbotron__bg"
+	data-start="background-position: 50% 0px;"
+	data-500-start="background-position: 50% -300px;">
+<div class = "jumbotron__caption">
 we are just a group of friends who code stuff\
 i'm uninstalling cs:go what a load of crap
+</div>
+</div>
+
 </div>
 
 </div>
