@@ -2,21 +2,25 @@
 
 @color_background: #ffffff;
 @color_text: #242628;
-@color_links: #44b39b;
+@color_accent: #44b39b;
+@color_red: #b38344;
+@color_blue: #4495b3;
+
+@fsize: 14px;
 
 html, body {
 	background: @color_background;
 	margin: 0px; padding: 0px;
 	height: 100%; min-height: 100%;
 	font-family: "Open Sans", freesans, sans-serif;
-	font-size: 14px;
+	font-size: @fsize;
 	color: @color_text;
 	line-height: 1.5;
 	letter-spacing: 1px;
 }
 
 a {
-	color: @color_links;
+	color: @color_accent;
 
 	&:link, &:visited {
 		text-decoration: none;
@@ -36,14 +40,17 @@ a {
     user-select: none;
 }
 
-.top > .wrapper, .bottom > .wrapper {
+.center {
+	margin: 0px auto;
+	overflow: hidden;
+}
+.wrapper {
 	position: relative;
 	height: 100%;
-	width: 780px;
-	margin: 0px auto;
+	width: 800px;
 	padding-left: 40px;
 	padding-right: 40px;
-	overflow: hidden;
+	.center;
 }
 
 .top {
@@ -80,27 +87,35 @@ a {
 	.navbar {
 		display: inline-block;
 		height: inherit;
-		width: 40%;
+		width: auto;
 
 		float: right;
-		font-size: 18px;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 
 		&__list {
-			ul {
-				list-style-type: none;
-				display: inline-block;
+			height: 40px;
+			width: inherit;
+			display: table-cell;
+			vertical-align: middle;
 
-				margin-top: 7px;
-				height: 100%;
-				&>li {
-					margin-left: 10px;
-					display: inline-block;
-				}
+			ul {
+				font-size: 0px;
+				display: inline-block;
+				list-style-type: none;
+				float: right;
+				//margin-top: 7px;
+				margin: 0; padding: 0;
 			}
 
-			a {
+			ul > li {
+				font-size: @fsize;
+				display: inline-block;
+				height: inherit;
+				margin-left: 10px;
+			}
+
+			ul > li > a {
 				transition: color 0.5s ease;
 
 				&:link, &:visited {
@@ -109,7 +124,7 @@ a {
 				}
 
 				&:hover, &:active {
-					color: @color_links;
+					color: @color_accent;
 					text-decoration: none;
 				}
 			}
@@ -118,7 +133,7 @@ a {
 }
 
 .jumbotron {
-	height: 400px;
+	height: 500px;
 
 	&__bg {
 		position: absolute;
@@ -134,7 +149,7 @@ a {
 			text-align: center;
 			color: white;
 			font-size: 2em;
-			padding-top: 180px;
+			padding-top: 200px;
 		}
 
 		p:hover {
@@ -146,6 +161,65 @@ a {
 
 .body {
 	height: 100%;
+
+	.wrapper {
+		padding-top: 40px;
+	}
+	.project-container {
+		height: auto;
+		width: 100%;
+		.center;
+
+		.project {
+			height: 100%;
+			width: auto;
+			color: @color_text;
+			padding: 10px 20px;
+			padding-bottom: 0;
+			margin: 0px 10px;
+
+			&__title {
+				font-weight: bold;
+				font-size: 2em;
+			}
+			&__list {
+				ul {
+					list-style: none;
+					padding-left: 0;
+					li {
+						margin: 10px 5px;
+					}
+					li span {
+						display: block;
+						width: auto;
+						height: 100px;
+
+						padding: 5px 10px;
+
+						font-size: 1.2em;
+						font-weight: bold;
+						text-transform: uppercase;
+
+						color: white;
+						background: @color_accent;
+						border-radius: 6px;
+					}
+				}
+			}
+		}
+
+		.project__list--red {
+			ul li span {
+				background: @color_red;
+			}
+		}
+
+		.project__list--blue {
+			ul li span {
+				background: @color_blue;
+			}
+		}
+	}
 }
 
 .bottom {

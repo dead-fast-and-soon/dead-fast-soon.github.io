@@ -30,14 +30,17 @@ a:active {
   -ms-user-select: none;
   user-select: none;
 }
-.top > .wrapper,
-.bottom > .wrapper {
+.center {
+  margin: 0px auto;
+  overflow: hidden;
+}
+.wrapper {
   position: relative;
   height: 100%;
-  width: 780px;
-  margin: 0px auto;
+  width: 800px;
   padding-left: 40px;
   padding-right: 40px;
+  margin: 0px auto;
   overflow: hidden;
 }
 .top {
@@ -71,37 +74,46 @@ a:active {
 .top .navbar {
   display: inline-block;
   height: inherit;
-  width: 40%;
+  width: auto;
   float: right;
-  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.top .navbar__list {
+  height: 40px;
+  width: inherit;
+  display: table-cell;
+  vertical-align: middle;
+}
 .top .navbar__list ul {
-  list-style-type: none;
+  font-size: 0px;
   display: inline-block;
-  margin-top: 7px;
-  height: 100%;
+  list-style-type: none;
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 .top .navbar__list ul > li {
-  margin-left: 10px;
+  font-size: 14px;
   display: inline-block;
+  height: inherit;
+  margin-left: 10px;
 }
-.top .navbar__list a {
+.top .navbar__list ul > li > a {
   transition: color 0.5s ease;
 }
-.top .navbar__list a:link,
-.top .navbar__list a:visited {
+.top .navbar__list ul > li > a:link,
+.top .navbar__list ul > li > a:visited {
   color: #ffffff;
   text-decoration: none;
 }
-.top .navbar__list a:hover,
-.top .navbar__list a:active {
+.top .navbar__list ul > li > a:hover,
+.top .navbar__list ul > li > a:active {
   color: #44b39b;
   text-decoration: none;
 }
 .jumbotron {
-  height: 400px;
+  height: 500px;
 }
 .jumbotron__bg {
   position: absolute;
@@ -122,13 +134,59 @@ a:active {
   text-align: center;
   color: white;
   font-size: 2em;
-  padding-top: 180px;
+  padding-top: 200px;
 }
 .jumbotron__caption p:hover {
   cursor: default;
 }
 .body {
   height: 100%;
+}
+.body .wrapper {
+  padding-top: 40px;
+}
+.body .project-container {
+  height: auto;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.body .project-container .project {
+  height: 100%;
+  width: auto;
+  color: #242628;
+  padding: 10px 20px;
+  padding-bottom: 0;
+  margin: 0px 10px;
+}
+.body .project-container .project__title {
+  font-weight: bold;
+  font-size: 2em;
+}
+.body .project-container .project__list ul {
+  list-style: none;
+  padding-left: 0;
+}
+.body .project-container .project__list ul li {
+  margin: 10px 5px;
+}
+.body .project-container .project__list ul li span {
+  display: block;
+  width: auto;
+  height: 100px;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: #44b39b;
+  border-radius: 6px;
+}
+.body .project-container .project__list--red ul li span {
+  background: #b38344;
+}
+.body .project-container .project__list--blue ul li span {
+  background: #4495b3;
 }
 .bottom {
   width: 100%;
