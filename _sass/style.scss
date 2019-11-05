@@ -1,0 +1,253 @@
+// out: style.css
+
+$color_background: #000000;
+$color_text: #999999;
+$color_accent: #C353ED;
+$color_red: #b38344;
+$color_blue: #4495b3;
+
+$fsize: 14px;
+
+html, body {
+	background: $color_background;
+	margin: 0px; padding: 0px;
+	height: 100%; min-height: 100%;
+	font-family: "Open Sans", freesans, sans-serif;
+	font-size: $fsize;
+	color: $color_text;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+
+a {
+	color: $color_accent;
+
+	&:link, &:visited {
+		text-decoration: none;
+	}
+
+	&:hover, &:active {
+		text-decoration: underline;
+	}
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.center {
+	margin: 0px auto;
+	overflow: hidden;
+}
+.wrapper {
+	position: relative;
+	height: 100%;
+	max-width: 1140px;
+	padding-left: 40px;
+	padding-right: 40px;
+	@extend .center;
+}
+
+#header {
+	font-family: serif;
+	font-style: italic;
+
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 40px;
+	padding: 10px 0px;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.5);
+
+	a {
+		@extend .noselect;
+		transition: color 0.5s ease;
+
+		&:link, &:visited {
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+		&:hover, &:active {
+			color: $color_accent;
+			text-decoration: none;
+		}
+	}
+
+	.logo {
+		display: inline-block;
+		height: inherit;
+		width: 40%;
+
+		&__text {
+			margin-top: 5px;
+			height: inherit;
+			width: auto;
+
+			box-sizing: border-box;
+
+			font-size: 20px;
+			font-weight: bolder;
+			letter-spacing: 10px;
+		}
+
+		&__img {
+			max-height: 50px; max-width: 100%;
+			height: auto; width: auto;
+		}
+	}
+
+	.navbar {
+		display: block;
+		height: inherit;
+		width: auto;
+		float: right;
+
+		letter-spacing: 2px;
+
+		&__list {
+			height: 40px;
+			width: inherit;
+			display: table-cell;
+			vertical-align: middle;
+
+			ul {
+				font-size: 0px;
+				display: inline-block;
+				list-style-type: none;
+				float: right;
+				//margin-top: 7px;
+				margin: 0; padding: 0;
+			}
+
+			ul > li {
+				font-size: $fsize;
+				display: inline-block;
+				height: inherit;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.jumbotron {
+	height: 800px;
+
+	&__bg {
+		position: absolute;
+		margin-top: -60px;
+		z-index: 0;
+		height: inherit;
+		width: 100%;
+		background-image: linear-gradient(transparent 75%, #000000), url('/assets/bg.png');
+		background-position-x: center;
+	}
+
+	&__caption {
+		@extend .noselect;
+		p {
+			font-family: serif;
+			font-variant-east-asian: full-width;
+			letter-spacing: 15px;
+			margin: 0px;
+			text-align: center;
+			color: white;
+			font-size: 2em;
+			font-weight: 200;
+			padding-top: 300px;
+		}
+
+		p:hover {
+			cursor: default;
+		}
+	}
+
+}
+
+#content {
+	height: 100%;
+
+	.wrapper {
+		padding-top: 100px;
+	}
+	.project-container {
+		display: inline-block;
+		height: auto;
+		width: 100%;
+		@extend .center;
+
+		.project {
+			height: 100%;
+			width: auto;
+			color: $color_text;
+			padding: 10px 20px;
+			padding-bottom: 0;
+			margin: 0px 10px;
+
+			&__title {
+				font-weight: bold;
+				font-size: 2em;
+			}
+			&__list {
+				ul {
+					list-style: none;
+					padding-left: 0;
+					li {
+						margin: 10px 5px;
+					}
+					li span {
+						display: block;
+						width: auto;
+						height: 100px;
+
+						padding: 5px 10px;
+
+						font-size: 1.2em;
+						font-weight: bold;
+						text-transform: uppercase;
+
+						color: white;
+						background: $color_accent;
+						border-radius: 6px;
+					}
+				}
+			}
+		}
+
+		.project__list--red {
+			ul li span {
+				background: $color_red;
+			}
+		}
+
+		.project__list--blue {
+			ul li span {
+				background: $color_blue;
+			}
+		}
+	}
+}
+
+#footer {
+	width: 100%;
+	height: 40px;
+	clear: both;
+	position: relative;
+	margin: 0px; padding: 10px 0px;
+	// border-top: 1px solid lighten($color_text, 80%);
+
+	.credits {
+		display: inline-block;
+		width: 100%;
+
+		margin-top: -5px;
+		font-size: 14px;
+		color: lighten($color_text, 60%);
+	}
+}

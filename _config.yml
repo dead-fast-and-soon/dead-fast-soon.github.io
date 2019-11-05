@@ -1,6 +1,5 @@
 url: 'http://hyperfresh.github.io/'
 exclude:
-    - 'src/'
     - 'Gemfile'
     - 'Gemfile.lock'
 markdown: kramdown
