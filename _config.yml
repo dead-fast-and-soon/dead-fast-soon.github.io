@@ -1,4 +1,4 @@
-url: 'http://hyperfresh.github.io/'
+url: 'http://dead-fast-soon.github.io/'
 exclude:
     - 'Gemfile'
     - 'Gemfile.lock'
