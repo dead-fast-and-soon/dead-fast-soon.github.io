@@ -1,19 +1,29 @@
 // out: style.css
 
 $color_background: #000000;
-$color_text: #999999;
+$color_text: #bbbbbb;
 $color_accent: #C353ED;
 $color_red: #b38344;
 $color_blue: #4495b3;
 
-$fsize: 14px;
+$font_size: 14px;
+
+@mixin header_text($weight)
+{
+	font-family: "Average", serif;
+	font-size: $font_size;
+	font-style: italic;
+	font-weight: $weight;
+	letter-spacing: 5px;
+	color: $color_text;
+}
 
 html, body {
 	background: $color_background;
 	margin: 0px; padding: 0px;
 	height: 100%; min-height: 100%;
 	font-family: "Open Sans", freesans, sans-serif;
-	font-size: $fsize;
+	font-size: $font_size;
 	color: $color_text;
 	line-height: 1.5;
 	letter-spacing: 1px;
@@ -60,7 +70,7 @@ a {
 	position: fixed;
 	z-index: 1;
 	width: 100%;
-	height: 40px;
+	height: 30px;
 	padding: 10px 0px;
 	color: #ffffff;
 	background: rgba(0, 0, 0, 0);
@@ -92,9 +102,7 @@ a {
 
 			box-sizing: border-box;
 
-			font-size: 20px;
-			font-weight: bolder;
-			letter-spacing: 10px;
+			@include header_text(600);
 		}
 
 		&__img {
@@ -109,17 +117,16 @@ a {
 		width: auto;
 		float: right;
 
-		letter-spacing: 2px;
-
 		&__list {
 			height: 40px;
 			width: inherit;
 			display: table-cell;
 			vertical-align: middle;
 
+
 			ul {
 				font-size: 0px;
-				display: inline-block;
+				display: block;
 				list-style-type: none;
 				float: right;
 				//margin-top: 7px;
@@ -127,7 +134,8 @@ a {
 			}
 
 			ul > li {
-				font-size: $fsize;
+				@include header_text(400);
+
 				display: inline-block;
 				height: inherit;
 				margin-left: 10px;
@@ -152,14 +160,12 @@ a {
 	&__caption {
 		@extend .noselect;
 		p {
-			font-family: serif;
-			font-variant-east-asian: full-width;
+			@include header_text(400);
+			font-size: 30px;
 			letter-spacing: 15px;
 			margin: 0px;
 			text-align: center;
 			color: white;
-			font-size: 2em;
-			font-weight: 200;
 			padding-top: 300px;
 		}
 
